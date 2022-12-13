@@ -20,7 +20,7 @@ describe("Test /test2 path", () => {
         request(app)
             .get("/test2")
             .query({
-                textFormat: 'My name!',
+                sourceText: 'My name!',
                 targetLanguage: 'ta'
             })
             .then(response => {
