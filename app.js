@@ -3,14 +3,10 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
-const favicon = require('serve-favicon');
+const translateRoutes = require('./routes/translate');
 
-//body-parser
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-
-//route files
-const translateRoutes = require('./routes/translate');
 
 //dev logging middleware
 if (process.env.NODE_ENV === 'development') {
@@ -22,9 +18,7 @@ app.use(cors());
 
 //set static folder
 app.use(express.static(path.join(__dirname, '_public')));
-app.use(favicon(path.join(__dirname, '_public', 'favicon.ico')));
 
-//mount routers
 app.use('/', translateRoutes);
 
 //error handler

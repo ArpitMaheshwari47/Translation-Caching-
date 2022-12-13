@@ -1,15 +1,12 @@
 const request = require("supertest");
 const express = require("express");
 const app = express();
-
 const translateRoutes = require('../routes/translate');
 
-//body-parser
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-//mount routers
-app.use("/", translateRoutes );
 
+app.use("/", translateRoutes );
 
 describe("Test the /test1 path", () => {
     test("It should response the GET method", async () => {
@@ -23,7 +20,7 @@ describe("Test /test2 path", () => {
         request(app)
             .get("/test2")
             .query({
-                sourceText: 'My name is Manvendra Rajpoot!',
+                textFormat: 'My name!',
                 targetLanguage: 'ta'
             })
             .then(response => {
@@ -32,6 +29,7 @@ describe("Test /test2 path", () => {
             });
     });
 });
+
 
 
 

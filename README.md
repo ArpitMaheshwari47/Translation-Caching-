@@ -44,28 +44,10 @@ To get the translation, we can Postman or any web browser and hit this API as fo
 
 We have to pass two `Query Params` with 
 ```
- _____________________________________
-|_______KEY_______|_______VALUE_______|
-|                 |                   |
-| sourceText      |        _          |
-|-----------------|-------------------|
-| targetLanguage  |        _          |
-|_________________|___________________|
-```
 - `sourceText`: the text you want to translate
 - `targetLanguage`: the langauge to be it has to be translated
 <br>**NOTE:**
   - for the `targetLangauge`, only **ISO Language code** should be passed as value.
-<br/>For example:
-    - "hi" for Hindi
-    - "ja" for Japanese
-    - "fa" for Persian, etc.
-    <br/>A list of all [ISO Language Codes](https://datahub.io/core/language-codes/r/0.html) is attached here.
-
-- A sample example is shown here when we hit the route on Postman.
-![](./_images/sample_example.png)
-
--Same thing can be done on any web browser by hitting the `GET` request.
 
 ## Caching 
 In order to avoid repeated hits to the translation API, caching of translation is done.
@@ -87,8 +69,3 @@ Test cases where written to provide whether the the request return statusCode as
 
   # Test once on hitting this command
   npm jest
-  ```
-
-
-- Version: 1.0.0
-- Lisence: MIT

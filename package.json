@@ -13,17 +13,16 @@
     "testEnvironment": "node"
   },
   "keywords": [],
-  "author": "Manvendra Rajpoot",
+  "author": "Arpit kogta",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "@vitalets/google-translate-api": "^7.0.0",
-    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
-    "express": "^4.17.1",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
-    "serve-favicon": "^2.5.0"
+    "colors": "^1.4.0"
   },
   "devDependencies": {
     "jest": "^26.6.3",
